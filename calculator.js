@@ -1,8 +1,10 @@
 $(document).ready(function() {
+  $("#checkb").hide();
   var e;
   $("#semester_select").change(function() {
     e = $("#semester_select").val();
     createForm(e);
+    $("#checkb").show();
   });
 });
 
@@ -31,6 +33,9 @@ function createForm(m) {
     e.appendChild(x);
     e.appendChild(y);
   }
+  var chk = document.createElement("input");
+  chk.type = "checkbox";
+  chk.setAttribute("data-toggle", "toggle");
 }
 function cgpaCalculate() {
   var sgpa = document.getElementsByName("sgpa");
@@ -43,4 +48,14 @@ function cgpaCalculate() {
   }
   document.getElementById("result").innerHTML =
     "Your CGPA : " + parseFloat(result1 / result2).toFixed(2);
+}
+
+function btn() {
+  var credit = document.getElementsByName("credit");
+  var cdit = ["11", "13", "13", "12", "14", "13", "13", "13"];
+  for (var i = 0; i < credit.length; i++) {
+    credit[i].value = cdit[i];
+    console.log(cdit[i]);
+  }
+  alert("sdsdsd");
 }

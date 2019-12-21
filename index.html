@@ -8,6 +8,9 @@
 	<!-- CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+		rel="stylesheet">
+	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 	<link rel="stylesheet" href="app.css">
 	<script src="calculator.js"></script>
 </head>
@@ -37,6 +40,12 @@
 						<div id="calform">
 							<!-- <div id="inputdiv"></div> -->
 						</div>
+						<div id="checkb" class="mb-2 float-right">
+							<input type="checkbox" data-onstyle="info" id="sdsd" onclick="btn()" data-toggle="toggle"
+								data-size="xs"><span class="studentask">Are you
+								DIU
+								swe 22 batch student?</span>
+						</div>
 						<button type="button" onclick="cgpaCalculate()"
 							class="d-inline-block btn-block btn btn-sm btn-success" value="">Calculate</button>
 					</div>
@@ -48,7 +57,6 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/jquery-3.4.1.min.js"></script>
 </body>
 
 </html>
