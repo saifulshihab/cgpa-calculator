@@ -1,0 +1,30 @@
+.sgpa,
+.credit {
+  width: 322px;
+  text-align: center;
+}
+
+.sgpa {
+  float: left;
+  margin-right: 10px;
+}
+
+#resultbox {
+  position: absolute;
+  top: 40%;
+  font-size: 42px;
+  margin-left: 40px;
+}
+
+.box1 {
+  border: 1px solid rgb(7, 205, 255);
+}
+
+.box2 {
+  border: 1px solid rgb(5, 255, 88);
+}
+
+.box1,
+.box2 {
+  border-radius: 5px;
+}
