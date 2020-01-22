@@ -15,6 +15,7 @@ function createForm(m) {
   for (i = 0; i < m; i++) {
     var x = document.createElement("input");
     x.type = "text";
+    x.id = "sgpa";
     x.name = "sgpa";
     x.placeholder = "Enter SGPA " + (i + 1) + "";
     x.setAttribute("class", "form-control");
@@ -24,6 +25,7 @@ function createForm(m) {
     var y = document.createElement("input");
     y.type = "text";
     y.name = "credit";
+    y.id = "credit";
     y.placeholder = "Enter semester " + (i + 1) + " Credit";
     y.setAttribute("class", "form-control");
     y.classList.add("mb-3");
@@ -43,8 +45,16 @@ function cgpaCalculate() {
   var result1 = 0,
     result2 = 0;
   for (var i = 0; i < sgpa.length; i++) {
-    result1 += parseFloat(sgpa[i].value) * parseFloat(credit[i].value);
-    result2 += parseFloat(credit[i].value);
+    if (sgpa[i].value == "" || credit[i].value == "") {
+      alert("Fill all input box.");
+      break;
+    } else if (sgpa[i].value == "" && credit[i].value == "") {
+      alert("Fill all input box.");
+      break;
+    } else {
+      result1 += parseFloat(sgpa[i].value) * parseFloat(credit[i].value);
+      result2 += parseFloat(credit[i].value);
+    }
   }
   document.getElementById("result").innerHTML =
     "Your CGPA : " + parseFloat(result1 / result2).toFixed(2);

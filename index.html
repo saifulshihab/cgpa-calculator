@@ -16,41 +16,45 @@
 </head>
 
 <body>
+
 	<div class="container">
-		<div class="calbody mt-3">
-			<h1 class="">CGPA Calculator by <a href="https://github.com/saifulshihab">@saifulshihab</a></h1>
-			<div id="demoo">
-				<div class="row">
-					<select name="semester_select" id="semester_select" class="form-control mb-3">
-						<option value="0" disabled selected>--Select number of Semester--</option>
-						<option value="1">1</option>
-						<option value="2">2</option>
-						<option value="3">3</option>
-						<option value="4">4</option>
-						<option value="5">5</option>
-						<option value="6">6</option>
-						<option value="7">7</option>
-						<option value="8">8</option>
-						<option value="9">9</option>
-						<option value="10">10</option>
-						<option value="11">11</option>
-						<option value="12">12</option>
-					</select>
-					<div class="col-7 p-1 box1">
-						<div id="calform">
-							<!-- <div id="inputdiv"></div> -->
+		<div class="calc_wrapper">
+			<div class="calbody mt-3">
+				<h1 class="">CGPA Calculator by <a href="https://github.com/saifulshihab">@saifulshihab</a></h1>
+				<div id="demoo">
+					<div class="row">
+						<select name="semester_select" id="semester_select" class="form-control mb-3">
+							<option value="0" disabled selected>--Select number of Semester--</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+							<option value="6">6</option>
+							<option value="7">7</option>
+							<option value="8">8</option>
+							<option value="9">9</option>
+							<option value="10">10</option>
+							<option value="11">11</option>
+							<option value="12">12</option>
+						</select>
+						<div class="col-7 p-1 box1">
+							<div id="calform">
+								<!-- <div id="inputdiv"></div> -->
+							</div>
+							<div id="checkb" class="mb-2 float-right">
+								<input type="checkbox" data-onstyle="info" id="sdsd" onclick="btn()"
+									data-toggle="toggle" data-size="xs"><span class="studentask">Are you
+									DIU
+									swe 22 batch student?</span>
+							</div>
+							<button type="button" onclick="cgpaCalculate()"
+								class="btn-block btn d-inline-block cal_btn" value="">Calculate</button>
 						</div>
-						<div id="checkb" class="mb-2 float-right">
-							<input type="checkbox" data-onstyle="info" id="sdsd" onclick="btn()" data-toggle="toggle"
-								data-size="xs"><span class="studentask">Are you
-								DIU
-								swe 22 batch student?</span>
-						</div>
-						<button type="button" onclick="cgpaCalculate()"
-							class="d-inline-block btn-block btn btn-sm btn-success" value="">Calculate</button>
-					</div>
-					<div class="col-5 box2">
-						<div id="resultbox" class="font-weight-bold"><span id="result" class="font-weight-bold"></span>
+						<div class="col-5 box2">
+							<div id="resultbox" class="font-weight-bold"><span id="result"
+									class="font-weight-bold"></span>
+							</div>
 						</div>
 					</div>
 				</div>

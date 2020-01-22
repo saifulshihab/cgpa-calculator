@@ -1,9 +1,15 @@
 .sgpa,
 .credit {
-  width: 322px;
+  width: 310px;
   text-align: center;
 }
-
+.calc_wrapper {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #e9f6f6;
+  box-shadow: 1px 2px 5px #514f4f;
+}
 .sgpa {
   float: left;
   margin-right: 10px;
@@ -32,4 +38,8 @@
   margin-left: 5px;
   font-size: 11px;
   color: #8c8c8c;
+}
+.cal_btn {
+  background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+  color: white;
 }
