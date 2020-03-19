@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>CGPA Calculator by Saiful Islam Shihab</title>
+	<title>CGPA Calculator</title>
 	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
 	<!-- CDN -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
@@ -13,7 +13,8 @@
 	 <link rel="icon" href="fav.png" type=""> 
 	<script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
 	<link rel="stylesheet" href="app.css">
-	<script src="calculator.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet"> 
+	<script src="calculator.js" defer></script>
 </head>
 
 <body>
@@ -21,7 +22,7 @@
 	<div class="container">
 		<div class="calc_wrapper">
 			<div class="calbody mt-3">
-				<h1 class="">CGPA Calculator by <a href="https://github.com/saifulshihab">@saifulshihab</a></h1>
+				<center><h1 class="caph">CGPA Calculator</a></h1></center>
 				<div id="demoo">
 					<div class="row">
 						<select name="semester_select" id="semester_select" class="form-control mb-3">
@@ -36,29 +37,32 @@
 							<option value="8">8</option>
 							<option value="9">9</option>
 							<option value="10">10</option>
-							<option value="11">11</option>
-							<option value="12">12</option>
+							<option value="11">11</option>							
 						</select>
-						<div class="col-7 p-1 box1">
+						<div class="col p-1 box1">
 							<div id="calform">
 								<!-- <div id="inputdiv"></div> -->
 							</div>
-							<div id="checkb" class="mb-2 float-right">
-								<input type="checkbox" data-onstyle="info" id="sdsd" onclick="btn()"
-									data-toggle="toggle" data-size="xs"><span class="studentask">Are you
-									DIU
-									swe 22 batch student?</span>
+							<div id="checkb" class="mb-2 mt-2">						
+									<input type="checkbox" id="diustd"><span class="studentask">I am a SWE'22 batch student of DIU.</span>
 							</div>
 							<button type="button" onclick="cgpaCalculate()"
 								class="btn-block btn d-inline-block cal_btn" value="">Calculate</button>
 						</div>
-						<div class="col-5 box2">
+					</div>
+					<div class="row">
+						<div class="col box2">
 							<div id="resultbox" class="font-weight-bold"><span id="result"
 									class="font-weight-bold"></span>
 							</div>
 						</div>
 					</div>
+						
+					
 				</div>
+			</div>
+			<div class="co">
+				<p class="pco">Developed by <a href="https://github.com/saifulshihab/" target="_blank">Saiful Islam</a></p>
 			</div>
 		</div>
 	</div>

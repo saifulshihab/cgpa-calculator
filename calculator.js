@@ -17,18 +17,18 @@ function createForm(m) {
     x.type = "text";
     x.id = "sgpa";
     x.name = "sgpa";
-    x.placeholder = "Enter SGPA " + (i + 1) + "";
-    x.setAttribute("class", "form-control");
-    x.classList.add("mb-3");
+    x.placeholder = "SGPA " + (i + 1) + "";
+    x.setAttribute("class", "inputf");
+    x.classList.add("mb-1");
     x.classList.add("sgpa");
 
     var y = document.createElement("input");
     y.type = "text";
     y.name = "credit";
     y.id = "credit";
-    y.placeholder = "Enter semester " + (i + 1) + " Credit";
-    y.setAttribute("class", "form-control");
-    y.classList.add("mb-3");
+    y.placeholder = "Credit " + (i + 1);
+    y.setAttribute("class", "inputf");
+    y.classList.add("mb-1");
     y.classList.add("credit");
 
     e = document.getElementById("calform");
@@ -54,10 +54,10 @@ function cgpaCalculate() {
     } else {
       result1 += parseFloat(sgpa[i].value) * parseFloat(credit[i].value);
       result2 += parseFloat(credit[i].value);
-    }
-  }
-  document.getElementById("result").innerHTML =
+      document.getElementById("result").innerHTML =
     "Your CGPA : " + parseFloat(result1 / result2).toFixed(2);
+    }
+  }  
 }
 
 function btn() {
@@ -69,3 +69,17 @@ function btn() {
   }
   alert("sdsdsd");
 }
+
+document.getElementById("diustd").onclick = function() {
+  let credit = document.getElementsByName("credit");
+  let cdit = ["11", "13", "13", "12", "14", "13", "13", "13", "14", "14", "11"];
+  if ( this.checked ) {
+    for (let i = 0; i < credit.length; i++) {
+      credit[i].value = cdit[i];     
+    }
+  } else {
+    for (let i = 0; i < credit.length; i++) {
+      credit[i].value = '';     
+    }
+  }
+};

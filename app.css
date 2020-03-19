@@ -1,6 +1,21 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+}
+.inputf{
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.inputf:focus{  
+  border: 1px solid rgb(94, 191, 255);
+  outline: none;
+  transition: 0.3s all ease;
+}
 .sgpa,
 .credit {
-  width: 310px;
+  width: 49.5%;
   text-align: center;
 }
 .calc_wrapper {
@@ -16,10 +31,8 @@
 }
 
 #resultbox {
-  position: absolute;
-  top: 40%;
-  font-size: 42px;
-  margin-left: 40px;
+  font-size: 32px;  
+  text-align: center;
 }
 
 .box1 {
@@ -27,6 +40,7 @@
 }
 
 .box2 {
+  margin-top: 10px;
   border: 1px solid rgb(5, 255, 88);
 }
 
@@ -42,4 +56,53 @@
 .cal_btn {
   background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
   color: white;
+}
+.caph{
+  color: #60b371;
+margin-bottom: 25px;
+}
+.pco{
+  font-size: 12px;
+color: #aaa;
+margin-top: 20px;
+}
+ 
+
+@media (min-width: 321px ) and (max-width: 375px) {
+  .sgpa, .credit {
+    width: 100%;    
+}
+#resultbox {
+  font-size: 31px;
+}  
+}
+
+@media (min-width: 376px ) and (max-width: 425px) {
+  .sgpa, .credit {
+    width: 100%;    
+} 
+}
+
+@media (min-width: 426px ) and (max-width: 768px) {
+  .sgpa, .credit {
+    width: 100%;    
+}
+}
+
+@media (min-width: 769px ) and (max-width: 1024px) {
+  .sgpa, .credit {
+    width: 49.2%;    
+}
+}
+
+@media (min-width: 1025px ) and (max-width: 1440px) {
+  .sgpa, .credit {
+    width: 49.4%;    
+}
+}
+
+@media (min-width: 1441px ) and (max-width: 2560px) {
+}
+
+@media (min-width: 2561px ) {
 }
