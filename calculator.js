@@ -56,7 +56,7 @@ const cgpaCalculate = () => {
 
 document.getElementById("diustd").onclick = function () {
   let credit = document.querySelectorAll(".credit");
-  let cdit = ["11", "13", "13", "12", "14", "13", "13", "13", "14", "14", "11"];
+  let cdit = ["11", "13", "13", "12", "14", "13", "13", "14", "14", "15", "7"];
   if (this.checked) {
     for (let i = 0; i < credit.length; i++) {
       credit[i].value = cdit[i];
