@@ -3,20 +3,19 @@ body{
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
-.inputf{
-  border-radius: 5px;
-  border: 1px solid #ddd;
-  outline: none;
-}
-.inputf:focus{  
-  border: 1px solid rgb(94, 191, 255);
-  outline: none;
-  transition: 0.3s all ease;
-}
 .sgpa,
 .credit {
   width: 49.5%;
   text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.sgpa:focus,
+.credit:focus {
+  border: 1px solid rgb(94, 191, 255);
+  outline: none;
+  transition: 0.3s all ease;
 }
 .calc_wrapper {
   margin-top: 20px;
