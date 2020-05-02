@@ -11,6 +11,8 @@ $(document).ready(function () {
 
 const createForm = (s) => {
   document.getElementById("calform").innerHTML = "";
+  document.getElementById("diustd").checked = false;
+  document.getElementById("result").innerHTML = "";
   let i;
   for (i = 0; i < s; i++) {
     const x = document.createElement("input");
