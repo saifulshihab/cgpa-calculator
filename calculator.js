@@ -1,4 +1,5 @@
 const calculate_btn = document.getElementById("cal-btn");
+const c_form = document.getElementById("calform");
 
 $(document).ready(function () {
   $("#checkb").hide();
@@ -10,7 +11,7 @@ $(document).ready(function () {
 });
 
 const createForm = (s) => {
-  document.getElementById("calform").innerHTML = "";
+  c_form.innerHTML = "";
   document.getElementById("diustd").checked = false;
   document.getElementById("result").innerHTML = "";
   let i;
@@ -26,10 +27,9 @@ const createForm = (s) => {
     y.placeholder = "Credit " + (i + 1);
     y.setAttribute("class", "credit");
     y.classList.add("mb-1");
-
-    const e = document.getElementById("calform");
-    e.appendChild(x);
-    e.appendChild(y);
+    
+    c_form.appendChild(x);
+    c_form.appendChild(y);
   }
 };
 const cgpaCalculate = () => {

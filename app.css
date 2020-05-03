@@ -3,8 +3,27 @@ body{
   padding: 0;
   font-family: 'Raleway', sans-serif;
 }
+.calc_wrapper {
+  width: 75%;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #e9f6f6;
+  box-shadow: 1px 2px 5px #514f4f;
+  margin-top: 25px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.calbody{
+  width: 100%;
+}
+.sgpa{
+  margin-right: 2px;
+}
 .sgpa,
 .credit {
+  display: inline-block;
   width: 49.5%;
   text-align: center;
   border-radius: 5px;
@@ -17,18 +36,9 @@ body{
   outline: none;
   transition: 0.3s all ease;
 }
-.calc_wrapper {
-  margin-top: 20px;
-  padding: 10px 20px;
-  border-radius: 5px;
-  background: #e9f6f6;
-  box-shadow: 1px 2px 5px #514f4f;
+#calform{
+  width: 100%;
 }
-.sgpa {
-  float: left;
-  margin-right: 10px;
-}
-
 #resultbox {
   font-size: 32px;  
   text-align: center;
@@ -47,6 +57,9 @@ body{
 .box2 {
   border-radius: 5px;
 }
+#checkb{
+  margin-left: 5px;
+}
 .studentask {
   margin-left: 5px;
   font-size: 11px;
@@ -57,8 +70,11 @@ body{
   color: white;
 }
 .caph{
-  color: #60b371;
-margin-bottom: 25px;
+  text-align: center;
+  margin-bottom: 25px;
+}
+.caph h1{  
+  color: #60b371;    
 }
 .pco{
   font-size: 12px;
@@ -68,15 +84,15 @@ margin-top: 20px;
  
 
 @media (min-width: 321px ) and (max-width: 375px) {
-  .sgpa, .credit {
+  /* .sgpa, .credit {
     width: 100%;    
-}
+} */
 #resultbox {
   font-size: 31px;
 }  
 }
 
-@media (min-width: 376px ) and (max-width: 425px) {
+/* @media (min-width: 376px ) and (max-width: 425px) {
   .sgpa, .credit {
     width: 100%;    
 } 
@@ -104,4 +120,4 @@ margin-top: 20px;
 }
 
 @media (min-width: 2561px ) {
-}
+} */
