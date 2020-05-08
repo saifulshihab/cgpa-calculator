@@ -35,6 +35,7 @@ body{
   border: 1px solid rgb(94, 191, 255);
   outline: none;
   transition: 0.3s all ease;
+  box-shadow: 0px 0px 10px rgb(94, 191, 255);
 }
 #calform{
   width: 100%;
