@@ -1,16 +1,15 @@
 const calculate_btn = document.getElementById("cal-btn");
 const c_form = document.getElementById("calform");
+const selected_semester = document.getElementById("semester_select");
+const darkModeCheckBtn = document.getElementById("darkmodeCheck");
 
-$(document).ready(function () {
-  $("#checkb").hide();
-  $("#semester_select").change(function () {
-    const nof_semester = $("#semester_select").val();
-    createForm(nof_semester);
-    $("#checkb").show();
-  });
+selected_semester.addEventListener("change", () => {
+  const nof_semester = selected_semester.value;
+  createForm(nof_semester);
+  document.getElementById("checkb").classList.add("visible");
 });
 
-const createForm = (s) => {
+const createForm = s => {
   c_form.innerHTML = "";
   document.getElementById("diustd").checked = false;
   document.getElementById("result").innerHTML = "";
@@ -27,7 +26,7 @@ const createForm = (s) => {
     y.placeholder = "Credit " + (i + 1);
     y.setAttribute("class", "credit");
     y.classList.add("mb-1");
-    
+
     c_form.appendChild(x);
     c_form.appendChild(y);
   }
@@ -56,7 +55,18 @@ const cgpaCalculate = () => {
   }
 };
 
-document.getElementById("diustd").onclick = function () {
+darkModeCheckBtn.onclick = function() {
+  if (this.checked) {
+    const darkCssLink = document.createElement("link");
+    darkCssLink.rel = "stylesheet";
+    darkCssLink.href = "darkmode.css";
+    document.querySelector("head").append(darkCssLink);
+  } else {
+    document.querySelector("head").lastChild.remove();
+  }
+};
+
+document.getElementById("diustd").onclick = function() {
   let credit = document.querySelectorAll(".credit");
   let cdit = ["11", "13", "13", "12", "14", "13", "13", "14", "14", "15", "7"];
   if (this.checked) {

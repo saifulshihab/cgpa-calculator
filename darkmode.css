@@ -1,0 +1,17 @@
+body {
+  background: #343535;
+  transition: 0.3s all ease;
+}
+.calc_wrapper {
+  background: #505353;
+}
+.sgpa,
+.credit,
+#semester_select {
+  border-color: #353333;
+  background: #343b40;
+  color: #ddd;
+}
+#result {
+  color: #ddd;
+}
