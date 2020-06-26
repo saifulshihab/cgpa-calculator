@@ -87,46 +87,61 @@ body {
   color: #aaa;
   margin-top: 20px;
 }
-.darkcheck-box {
+.theme-check button {
   font-size: 13px;
   float: right;
   margin-top: 20px;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  border: 0.5px solid #ddd;
+  margin-right: 5px;
+}
+.lower-third {
+  position: fixed;
+  z-index: 10;
+  padding: 10px 15px;
+  background: rgb(79, 197, 255);
+  border-radius: 5px;
+  font-style: italic;
+  font-size: 13px;
+  top: 90%;
+  right: 1%;
+  font-weight: bold;
+  color: #5c6060;
+  display: none;
+}
+.lower-third p {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 4px;
+}
+#lower-close {
+  display: inline-block;
+  padding: 4px;
+  font-size: 20px;
+}
+#lower-close span {
+  padding: 2px;
+  cursor: pointer;
+}
+.lower-third.visible {
+  display: block;
+  animation: lower-show-animation 0.2s ease-in;
+}
+@keyframes lower-show-animation {
+  from {
+    transform: translateX(20rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.lower-third p {
+  margin-bottom: 0;
 }
 @media (min-width: 321px) and (max-width: 375px) {
-  /* .sgpa, .credit {
-    width: 100%;    
-} */
   #resultbox {
     font-size: 31px;
   }
 }
-
-/* @media (min-width: 376px ) and (max-width: 425px) {
-  .sgpa, .credit {
-    width: 100%;    
-} 
-}
-
-@media (min-width: 426px ) and (max-width: 768px) {
-  .sgpa, .credit {
-    width: 100%;    
-}
-}
-
-@media (min-width: 769px ) and (max-width: 1024px) {
-  .sgpa, .credit {
-    width: 49.2%;    
-}
-}
-
-@media (min-width: 1025px ) and (max-width: 1440px) {
-  .sgpa, .credit {
-    width: 49.4%;    
-}
-}
-
-@media (min-width: 1441px ) and (max-width: 2560px) {
-}
-
-@media (min-width: 2561px ) {
-} */
