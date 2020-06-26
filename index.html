@@ -5,9 +5,9 @@
 	<meta charset="UTF-8">
 	<title>CGPA Calculator</title>
 	<!-- CDN -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">	
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 	<link rel="icon" href="fav.png" type="">
-	<link rel="stylesheet" href="app.css">
+	<link id="appStyleSheet" rel="stylesheet" href="app.css">
 	<link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
 	<script src="calculator.js" defer></script>
 </head>
@@ -55,10 +55,16 @@
 		</div>
 		<div class="co">
 			<p class="pco">Developed by <a href="https://github.com/saifulshihab/" target="_blank">Saiful Islam</a></p>
-			<span class="darkcheck-box">
-				<input type="checkbox" id="darkmodeCheck">
-				<label for="darkmodeCheck">Dark Mode</label>
+			<span class="theme-check">
+				<button id="lightThemeCheck">Light Mode</button>
+				<button id="darkThemeCheck">Dark Mode</button>
 			</span>
+		</div>
+	</div>
+	<div class="lower-third">
+		<p>Give a Star in GitHub Repository. <a href="#" target="_blank">Go</a></p>
+		<div id="lower-close">
+			<span id="lower-close-btn">&times;</span>
 		</div>
 	</div>
 </body>
