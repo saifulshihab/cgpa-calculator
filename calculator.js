@@ -1,7 +1,9 @@
 const calculate_btn = document.getElementById("cal-btn");
 const c_form = document.getElementById("calform");
 const selected_semester = document.getElementById("semester_select");
-const darkModeCheckBtn = document.getElementById("darkmodeCheck");
+const lightThemeCheckBtn = document.getElementById("lightThemeCheck");
+const darkThemeCheckBtn = document.getElementById("darkThemeCheck");
+const setTheme = localStorage.getItem("theme");
 
 selected_semester.addEventListener("change", () => {
   const nof_semester = selected_semester.value;
@@ -46,6 +48,9 @@ const cgpaCalculate = () => {
     } else if (!+sgpa[i].value || !+credit[i].value) {
       alert("Invalid input!");
       return;
+    } else if (+sgpa[i].value > 4) {
+      alert("SGPA can't be greater then 4!");
+      return;
     } else {
       result1 += parseFloat(sgpa[i].value) * parseFloat(credit[i].value);
       result2 += parseFloat(credit[i].value);
@@ -55,16 +60,23 @@ const cgpaCalculate = () => {
   }
 };
 
-darkModeCheckBtn.onclick = function() {
-  if (this.checked) {
-    const darkCssLink = document.createElement("link");
-    darkCssLink.rel = "stylesheet";
-    darkCssLink.href = "darkmode.css";
-    document.querySelector("head").append(darkCssLink);
-  } else {
-    document.querySelector("head").lastChild.remove();
-  }
+lightThemeCheckBtn.addEventListener("click", () => {
+  swapStyleSheet("app.css");
+});
+darkThemeCheckBtn.addEventListener("click", () => {
+  swapStyleSheet("darkmode.css");
+});
+
+const swapStyleSheet = selectedSheet => {
+  document.getElementById("appStyleSheet").href = selectedSheet;
+  localStorage.setItem("theme", selectedSheet);
 };
+
+if (setTheme == null) {
+  swapStyleSheet("app.css");
+} else {
+  swapStyleSheet(setTheme);
+}
 
 document.getElementById("diustd").onclick = function() {
   let credit = document.querySelectorAll(".credit");
@@ -79,5 +91,12 @@ document.getElementById("diustd").onclick = function() {
     }
   }
 };
+
+setTimeout(() => {
+  document.querySelector(".lower-third").classList.toggle("visible");
+}, 3000);
+document.getElementById("lower-close-btn").addEventListener("click", () => {
+  document.querySelector(".lower-third").classList.remove("visible");
+});
 
 calculate_btn.addEventListener("click", cgpaCalculate);
