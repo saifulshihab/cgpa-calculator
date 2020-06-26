@@ -146,39 +146,6 @@ body {
     font-size: 31px;
   }
 }
-
-/* @media (min-width: 376px ) and (max-width: 425px) {
-  .sgpa, .credit {
-    width: 100%;    
-} 
-}
-
-@media (min-width: 426px ) and (max-width: 768px) {
-  .sgpa, .credit {
-    width: 100%;    
-}
-}
-
-@media (min-width: 769px ) and (max-width: 1024px) {
-  .sgpa, .credit {
-    width: 49.2%;    
-}
-}
-
-@media (min-width: 1025px ) and (max-width: 1440px) {
-  .sgpa, .credit {
-    width: 49.4%;    
-}
-}
-
-@media (min-width: 1441px ) and (max-width: 2560px) {
-}
-
-@media (min-width: 2561px ) {
-} */
-
-/* Overwrite */
-
 body {
   background: #343535;
   transition: 0.3s all ease;
