@@ -1,0 +1,147 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", sans-serif;
+}
+.calc_wrapper {
+  width: 75%;
+  margin-top: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background: #e9f6f6;
+  box-shadow: 1px 2px 5px #514f4f;
+  margin-top: 25px;
+  margin-bottom: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.calbody {
+  width: 100%;
+}
+.sgpa {
+  margin-right: 2px;
+}
+.sgpa,
+.credit {
+  display: inline-block;
+  width: 49.5%;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  outline: none;
+}
+.sgpa:focus,
+.credit:focus {
+  border: 1px solid rgb(94, 191, 255);
+  outline: none;
+  transition: 0.3s all ease;
+  box-shadow: 0px 0px 10px rgb(94, 191, 255);
+}
+#calform {
+  width: 100%;
+}
+#resultbox {
+  font-size: 32px;
+  text-align: center;
+}
+
+.box1 {
+  border: 1px solid rgb(7, 205, 255);
+}
+
+.box2 {
+  margin-top: 10px;
+  border: 1px solid rgb(5, 255, 88);
+}
+
+.box1,
+.box2 {
+  border-radius: 5px;
+}
+#checkb {
+  margin-left: 5px;
+  display: none;
+}
+#checkb.visible {
+  display: block;
+}
+.studentask {
+  margin-left: 5px;
+  font-size: 11px;
+  color: #8c8c8c;
+}
+.cal_btn {
+  background: linear-gradient(to right, #67b26b, #4ca2cb) !important;
+  color: white;
+}
+.caph {
+  text-align: center;
+  margin-bottom: 25px;
+}
+.caph h1 {
+  color: #60b371;
+}
+.pco {
+  display: inline-block;
+  font-size: 12px;
+  color: #aaa;
+  margin-top: 20px;
+}
+.theme-check button {
+  font-size: 13px;
+  float: right;
+  margin-top: 20px;
+  border-radius: 5px;
+  background: transparent;
+  outline: none;
+  border: 0.5px solid #ddd;
+  margin-right: 5px;
+}
+.lower-third {
+  position: fixed;
+  z-index: 10;
+  padding: 10px 15px;
+  background: rgb(79, 197, 255);
+  border-radius: 5px;
+  font-style: italic;
+  font-size: 13px;
+  top: 90%;
+  right: 1%;
+  font-weight: bold;
+  color: #5c6060;
+  display: none;
+}
+.lower-third p {
+  display: inline-block;
+  margin-top: 0;
+  margin-right: 4px;
+}
+#lower-close {
+  display: inline-block;
+  padding: 4px;
+  font-size: 20px;
+}
+#lower-close span {
+  padding: 2px;
+  cursor: pointer;
+}
+.lower-third.visible {
+  display: block;
+  animation: lower-show-animation 0.2s ease-in;
+}
+@keyframes lower-show-animation {
+  from {
+    transform: translateX(20rem);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+.lower-third p {
+  margin-bottom: 0;
+}
+@media (min-width: 321px) and (max-width: 375px) {
+  #resultbox {
+    font-size: 31px;
+  }
+}
