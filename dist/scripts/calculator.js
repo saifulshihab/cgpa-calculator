@@ -67,7 +67,7 @@ darkThemeCheckBtn.addEventListener("click", () => {
 });
 
 const swapStyleSheet = selectedSheet => {
-  document.getElementById("appStyleSheet").href = selectedSheet;
+  document.getElementById("appStyleSheet").href = `dist/styles/${selectedSheet}`;
   localStorage.setItem("theme", selectedSheet);
 };
 
