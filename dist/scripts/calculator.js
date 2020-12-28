@@ -79,7 +79,7 @@ if (setTheme == null) {
 
 document.getElementById("diustd").onclick = function() {
   let credit = document.querySelectorAll(".credit");
-  let cdit = ["11", "13", "13", "12", "14", "13", "13", "14", "14", "15", "7"];
+  let cdit = ["11", "13", "13", "12", "14", "13", "13", "14", "14", "15", "7", "8"];
   if (this.checked) {
     for (let i = 0; i < credit.length; i++) {
       credit[i].value = cdit[i];
