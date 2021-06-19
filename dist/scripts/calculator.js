@@ -65,23 +65,25 @@ const cgpaCalculate = () => {
       const cgpa = parseFloat(totalCreditnSgpa / totalCredit).toFixed(2);
       console.log(cgpa);
       remarks =
-        cgpa >= 3.75
+        cgpa > 3.75
           ? 'Outstanding'
-          : cgpa < 3.75 && cgpa >= 3.5
+          : cgpa <= 3.75 && cgpa > 3.5
+          ? 'Excellent'
+          : cgpa <= 3.5 && cgpa > 3.25
           ? 'Very Good'
-          : cgpa < 3.5 && cgpa >= 3.25
+          : cgpa <= 3.25 && cgpa > 3
           ? 'Good'
-          : cgpa < 3.25 && cgpa >= 3
+          : cgpa <= 3 && cgpa > 2.75
           ? 'Satisfactory'
-          : cgpa < 3 && cgpa >= 2.75
+          : cgpa <= 2.75 && cgpa > 2.5
           ? 'Above Average'
-          : cgpa < 2.75 && cgpa >= 2.5
+          : cgpa <= 2.5 && cgpa > 2.25
           ? 'Average'
-          : cgpa < 2.5 && cgpa >= 2.25
+          : cgpa <= 2.25 && cgpa > 2
           ? 'Below Average'
-          : cgpa < 2.25 && cgpa >= 2
+          : cgpa <= 2 && cgpa > 1.99
           ? 'Pass'
-          : cgpa < 2 && 'Fail';
+          : 'Fail';
 
       document.getElementById('result').innerHTML = `Your CGPA : ${cgpa}`;
       remarks_box.innerHTML = `Remarks : ${remarks}`;
