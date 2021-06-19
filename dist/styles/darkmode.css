@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 .calc_wrapper {
   width: 75%;
@@ -53,7 +53,9 @@ body {
   margin-top: 10px;
   border: 1px solid rgb(5, 255, 88);
 }
-
+.box2_hidden {
+  display: none;
+}
 .box1,
 .box2 {
   border-radius: 5px;
@@ -162,5 +164,10 @@ body {
 }
 #result,
 .darkcheck-box {
+  color: #ddd;
+}
+
+.credit_text,
+.remarks_text {
   color: #ddd;
 }
